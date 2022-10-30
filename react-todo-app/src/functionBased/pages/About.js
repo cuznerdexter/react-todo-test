@@ -6,9 +6,10 @@ import SinglePage from './SingPage';
 const About = (props) => {
     const { url, path } = props;
     console.log(props, url, path);
-    
-    return <div>
-        <ul>
+
+    return (
+    <div className="about__content">
+        <ul className="about__list">
             <li>
                 <Link to="about-app">About App</Link>
             </li>
@@ -20,5 +21,6 @@ const About = (props) => {
             <Route path=":slug" element={<SinglePage/>}/>
         </Routes>
     </div>
+    )
 }
 export default About
